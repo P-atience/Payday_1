@@ -1,0 +1,37 @@
+package payday_1;
+
+import java.util.Scanner;
+
+
+/**
+ * Student Name: Patience
+ * Student Number: ST10441085
+ */
+public class Payday_1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        
+        Scanner keyboard = new Scanner (System.in);
+        double hours;
+        double rate;
+        double pay;
+        
+        System.out.print("How many hours did you work?");
+        hours = keyboard.nextDouble();
+        System.out.print("How much do you get paid per hour?");
+        rate = keyboard.nextDouble();
+        //calculations
+        if (hours <= 40){
+           // Calculate gross pay for 40 hours or less 
+           pay = hours * rate;
+        } else {
+            // Calculate gross pay for more than 40 hours
+            pay = hours * (rate * 1.5);
+        }
+        System.out.println("You earned R" + pay);
+    }
+    
+}
